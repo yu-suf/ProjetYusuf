@@ -23,7 +23,7 @@ namespace ProjetJeuxMVC.Controllers
         {
             return RedirectToAction(nameof(Login));
         }
-        
+        //
         [HttpGet]
         public ActionResult Login()
         {
