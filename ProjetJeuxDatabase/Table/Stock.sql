@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Stock]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [JeuxId] INT NOT NULL, 
+    CONSTRAINT [FK_Stock_ToJeux] FOREIGN KEY ([JeuxId]) REFERENCES [Jeux]([Id])
+)

@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[PlateForme]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Nom] NVARCHAR(55) NOT NULL UNIQUE
+)

@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[EtatJeux]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Nom] NVARCHAR(255) NOT NULL
+)

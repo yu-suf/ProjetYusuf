@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Formule]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Nom] NVARCHAR(255) NOT NULL UNIQUE, 
+    [NbrDeJeuxParMois] INT NOT NULL, 
+    [Prix] INT NOT NULL
+)

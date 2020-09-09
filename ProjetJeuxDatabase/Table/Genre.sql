@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Genre]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Nom] NVARCHAR(255) NOT NULL UNIQUE 
+)
+
+GO
