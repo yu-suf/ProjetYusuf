@@ -70,13 +70,11 @@
     <Build Include="Table\Formule.sql" />
     <Build Include="Table\Adresse.sql" />
     <Build Include="Table\Utilisateur.sql" />
-    <Build Include="Table\HistoriqueDesEchanges.sql" />
-    <Build Include="Table\FicheEchange.sql" />
-    <Build Include="Table\Stock.sql" />
     <Build Include="Procédures\CheckUser.sql" />
     <Build Include="Functions\GetPostSalt.sql" />
     <Build Include="Functions\GetPreSalt.sql" />
     <Build Include="Procédures\RegisterUser.sql" />
+    <Build Include="Table\FicheEchange.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ProjetJeuxDatabase.refactorlog" />

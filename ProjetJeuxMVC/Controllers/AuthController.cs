@@ -36,11 +36,17 @@ namespace ProjetJeuxMVC.Controllers
                 LoginInfo loginInfo = new LoginInfo { NomUtilisateur = form.Login, Password = form.Password };
                 UtilisateurRepository service = new UtilisateurRepository();
                 Utilisateur utilisateur = service.Check(loginInfo);
-                if (!(User is null))
+                if (User is null)
+                {
+                    ModelState.AddModelError("", "Mauvais Login ou Mot de passe");
+                    return View(form);
+                }
+                else
                 {
                     UtilisateurSession.utilisateur = utilisateur;
-                    return RedirectToAction("Index", "Home");
+                    
                 }
+                return RedirectToAction("Index", "Home");
             }
             return View(form);
         }

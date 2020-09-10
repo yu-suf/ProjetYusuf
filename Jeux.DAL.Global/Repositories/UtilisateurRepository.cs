@@ -18,6 +18,8 @@ namespace Jeux.DAL.Global.Repositories
             command.AddParameter("Passwd", entity.Password);
             command.AddParameter("NomUtilisateur", entity.NomUtilisateur);
             return _connection.ExecuteReader(command, (reader) => reader.ToUtilisateurGLOBAL()).SingleOrDefault();
+            
+
         }
 
         public bool Delete(int id)

@@ -9,7 +9,7 @@ namespace ProjetJeuxMVC.Models.Auth
 {
     public class FormulaireDeLogin
     {
-        [DisplayName("Identifiant ou e-mail :")]
+        [DisplayName("Nom Utilisateur :")]
         [Required]
         [MinLength(3)]
         public string Login { get; set; }

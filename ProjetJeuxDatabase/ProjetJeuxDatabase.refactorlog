@@ -35,4 +35,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="StockIdArecuperer" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="e546b3ae-c656-4f56-801d-e98790cc3575" ChangeDateTime="09/10/2020 10:28:00">
+    <Property Name="ElementName" Value="[dbo].[FicheEchange].[MotantSuplementaire]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FicheEchange]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MontantSuplementaire" />
+  </Operation>
 </Operations>

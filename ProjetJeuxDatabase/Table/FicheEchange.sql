@@ -1,11 +1,10 @@
 ﻿CREATE TABLE [dbo].[FicheEchange]
 (
-	[StockIdArecuperer] INT NOT NULL , 
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [DateDEchange] DATETIME NOT NULL, 
+    [MontantSuplementaire] MONEY NULL, 
+    [JeuxIdAdonner] INT NOT NULL, 
+    [JeuxIdArecevoir] INT NOT NULL, 
     [UtilisateurId] INT NOT NULL, 
-    [DatedEchange] DATETIME NOT NULL, 
-    [MontantSuplementaire] INT NULL, 
-    [JeuxAdonner] INT NOT NULL, 
-    CONSTRAINT [FK_FicheEchange_ToStock] FOREIGN KEY ([StockIdArecuperer]) REFERENCES [Stock]([Id]), 
-    CONSTRAINT [FK_FicheEchange_ToUtilisateur] FOREIGN KEY ([UtilisateurId]) REFERENCES [Utilisateur]([Id]), 
-    CONSTRAINT [PK_FicheEchange] PRIMARY KEY ([StockIdArecuperer], [UtilisateurId])
+    CONSTRAINT [FK_FicheEchange_ToJeux] FOREIGN KEY ([JeuxIdArecevoir]) REFERENCES [Jeux]([Id])
 )
