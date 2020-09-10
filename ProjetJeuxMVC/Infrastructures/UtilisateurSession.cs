@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Jeux.DAL.Global.Models;
 using ProjetJeuxMVC.Models;
 
 namespace ProjetJeuxMVC.Infrastructures
@@ -12,6 +13,11 @@ namespace ProjetJeuxMVC.Infrastructures
         {
             get { return (Utilisateur)HttpContext.Current.Session["Utilisateur"]; }
             set { HttpContext.Current.Session["Utilisateur"] = value; }
+        }
+
+        public static void Abandon()
+        {
+            HttpContext.Current.Session.Abandon();
         }
     }
 }

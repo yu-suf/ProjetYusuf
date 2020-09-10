@@ -28,5 +28,15 @@ namespace Jeux.DAL.Client.Mappers
             if (entity == null) return null;
             return new C.Utilisateur(entity);
         }
+
+        public static G.LoginInfo ToLoginUtilisateurGLOBAL (this C.LoginInfo entity)
+        {
+            if (entity == null) return null;
+            return new G.LoginInfo
+            {
+                NomUtilisateur = entity.NomUtilisateur,
+                Password = entity.Password
+            };
+        }
     }
 }

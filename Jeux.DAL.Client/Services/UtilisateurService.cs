@@ -18,10 +18,10 @@ namespace Jeux.DAL.Client.Services
         {
             _repo = new UtilisateurRepository();
         }
-        public C.Utilisateur Check(C.Utilisateur entity)
+        public C.LoginInfo Check(C.LoginInfo entity)
         {
 
-            return _repo.Check(entity.ToUtilisateurGLOBAL()).ToUtilisateurCLIENT();
+            return _repo.Check(entity()).ToUtilisateurCLIENT();
         }
         
         public bool Delete(int id)

@@ -11,7 +11,7 @@ namespace Jeux.DAL.Global.Repositories
     public abstract class BasicRepository
     {
         protected Connection _connection;
-        private ConnectionStringSettings ConnectionString { get { return ConfigurationManager.ConnectionStrings["ProjetJeux.dbo.SqlClient"]; } }
+        private ConnectionStringSettings ConnectionString { get { return ConfigurationManager.ConnectionStrings["ProjetJeux.SqlClient"]; } }
 
         public BasicRepository()
         {

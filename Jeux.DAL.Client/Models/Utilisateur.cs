@@ -16,10 +16,7 @@ namespace Jeux.DAL.Client.Models
         public string Email { get; set; }
         public string Password { get; set; }
 
-        public Utilisateur()
-        {
-
-        }
+        
         public Utilisateur(G.Utilisateur entity)
         {
             Id = entity.Id;
@@ -30,6 +27,16 @@ namespace Jeux.DAL.Client.Models
             Password = entity.Password;
         }
 
+        public Utilisateur(string nomUtilisateur, string nom, string prenom, string email, string password)
+        {
+            
+            NomUtilisateur = nomUtilisateur;
+            Nom = nom;
+            Prenom = prenom;
+            Email = email;
+            Password = password;
+        }
+
         public Utilisateur(int id, string nomUtilisateur, string nom, string prenom, string email, string password)
         {
             Id = id;
@@ -38,6 +45,10 @@ namespace Jeux.DAL.Client.Models
             Prenom = prenom;
             Email = email;
             Password = password;
+        }
+
+        public Utilisateur(Utilisateur entity)
+        {
         }
     }
 }

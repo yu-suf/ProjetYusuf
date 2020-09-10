@@ -20,9 +20,19 @@ namespace Jeux.DAL.Global.Mappers
                 Nom = (string)reader[nameof(Utilisateur.Nom)],
                 Prenom = (string)reader[nameof(Utilisateur.Prenom)],
                 Email = (string)reader[nameof(Utilisateur.Email)],
-                Password = (string)reader[nameof(Utilisateur.Password)]
+                Passwd = (string)reader[nameof(Utilisateur.Passwd)]
                 //FormuleId = (int) reader [nameof (Utilisateur.FormuleId)],
                 //AdresseId =(int) reader [nameof (Utilisateur.AdresseId)]
+            };
+
+        }
+        public static LoginInfo ToLoginInfoGLOBAL (this IDataRecord reader)
+        {
+            if (reader == null) return null;
+            return new LoginInfo
+            {
+                NomUtilisateur = (string)reader[nameof(LoginInfo.NomUtilisateur)],
+                Password = (string)reader[nameof(LoginInfo.Password)]
             };
         }
     }

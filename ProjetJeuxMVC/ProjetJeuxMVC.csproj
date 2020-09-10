@@ -138,13 +138,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructures\Services\AuthService.cs" />
-    <Compile Include="Infrastructures\Services\BaseService.cs" />
     <Compile Include="Infrastructures\UtilisateurSession.cs" />
-    <Compile Include="Mapper\mapper.cs" />
     <Compile Include="Models\Auth\FormulaireDeLogin.cs" />
     <Compile Include="Models\Auth\FormulaireDInscription.cs" />
-    <Compile Include="Models\Utilisateur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Mapper\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -201,6 +198,12 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jeux.DAL.Global\Jeux.DAL.Global.csproj">
+      <Project>{1F7D154A-68C1-41A6-9E15-E4BE348294FA}</Project>
+      <Name>Jeux.DAL.Global</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

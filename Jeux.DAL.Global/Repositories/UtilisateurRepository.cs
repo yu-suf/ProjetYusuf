@@ -11,11 +11,10 @@ namespace Jeux.DAL.Global.Repositories
 {
     public class UtilisateurRepository : BasicRepository, IUtilisateurRepository<int, Utilisateur>
     {
-        public Utilisateur Check(Utilisateur entity)
+        public Utilisateur Check(LoginInfo entity)
         {
-            string sqlQueryLogin = "Exec dbo.CheckUser @Email, @NomUtilisateur, @Passwd";
+            string sqlQueryLogin = "Exec dbo.CheckUser @NomUtilisateur, @Passwd";
             Command command = new Command(sqlQueryLogin);
-            command.AddParameter("Email", entity.Email);
             command.AddParameter("Passwd", entity.Password);
             command.AddParameter("NomUtilisateur", entity.NomUtilisateur);
             return _connection.ExecuteReader(command, (reader) => reader.ToUtilisateurGLOBAL()).SingleOrDefault();
@@ -48,11 +47,11 @@ namespace Jeux.DAL.Global.Repositories
             command.AddParameter("Nom", entity.Nom);
             command.AddParameter("Prenom", entity.Prenom);
             command.AddParameter("Email", entity.Email);
-            command.AddParameter("Passwd", entity.Password);
+            command.AddParameter("Passwd", entity.Passwd);
             command.AddParameter("NomUtilisateur", entity.NomUtilisateur);
             //command.AddParameter("FormueleId", entity.FormuleId);
             //command.AddParameter("AdresseId", entity.AdresseId);
-            return (int)_connection.ExecuteScalar(command);
+            return _connection.ExecuteNonQuery(command);
         }
 
         public bool Update(int id, Utilisateur entity)
